@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: rgb(91, 2, 80);
+
+}
+
+body {
+    margin: 0;
+    font-family: poppins, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100wh;
+    display: flex;
+}
+
+.container aside {
+    background: var(--primary-color);
+    width: 230px;
+    color: white;
+    transition: all 300ms;
+    margin-left: 0px;
+}
+
+.container main {
+    flex-grow: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 3px 0px 7px rgba(0, 0, 0, 0.4) inset;
+}
+
+.container main .content-area {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo h1 {
+    text-transform: uppercase;
+    color: rgb(35, 8, 62);
+    letter-spacing: 5px;
+}
+
+.logo h1::first-letter {
+    font-size: 42px;
+    color: rgba(232, 57, 57, 0.651);
+}
+
+.links {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.links li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.links li a::before {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 3px;
+    height: 0;
+    left: 0px;
+    top: 0px;
+    transition: all 300ms;
+
+}
+
+.links li a:hover::before {
+    height: 100%;
+}
+
+.links li a::after {
+    content: "";
+    position: absolute;
+    background: red;
+    width: 3px;
+    height: 0;
+    right: 0px;
+    bottom: 0px;
+    transition: all 300ms;
+
+}
+
+.links li a:hover::after {
+    height: 100%;
+}
+
+
+.links li a:hover {
+    background: rgba(106, 13, 13, 0.484);
+}
+
+.links li a.active {
+    background: black;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked~aside {
+    margin-left: -230px;
+}
+
+#menu-bar {
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.g-card-groups {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.g-card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    flex-basis: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+.g-card:hover {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    scale: 1.1;
+    filter: invert();
+}
+
+.g-card i {
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.g-card h3 {
+    line-height: 0px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.g-card p {
+    font-size: 14px;
+}
+
+.bg-l-success {
+    color: black;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+}
+
+.bg-l-info {
+    color: black;
+    background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+}
+
+.bg-l-primary {
+    color: black;
+    background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
+}
+
+.bg-l-warning {
+    color: black;
+    background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+.content-area {
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
+
+.table-striped {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.489);
+    border: 0.05rem solid rgba(0, 0, 0, 0.4);
+}
+
+.table-striped thead {
+    background: rgba(0, 0, 0, 0.789);
+    color: white;
+}
+
+.table-striped th {
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.table-striped tbody tr:nth-child(even) {
+    background: rgb(202, 202, 247);
+}
+
+.table-striped td {
+    padding: 10px;
+}
+
+@media screen and (min-width: 576px) {
+    .g-card {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .g-card {
+        flex-basis: 30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .g-card {
+        flex-basis: 22%;
+    }
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form-control textarea {
+    resize: none;
+}
+
+.form-control label:not(.inline-label) {
+    display: block;
+    color: rgb(106, 97, 97);
+}
+
+.form-control input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+.form-control textarea,
+.form-control select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 15px;
+}
+
+.form-control input:not([type="checkbox"]):not([type="radio"]):focus,
+.form-control textarea:focus,
+.form-control select:focus {
+    outline: 2px solid dodgerblue;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group button {
+    margin-top: 10px;
+    background: dodgerblue;
+    padding: 10px 30px;
+    border-radius: 19px;
+    border: 0.5rem sold black;
+    color: rgb(245, 244, 243);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: all 300ms;
+}
+
+.btn-group button:hover {
+    box-shadow: 2px 2px 10px rgba(45, 42, 42, 0.9);
+}
+
+.g-form {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(81, 81, 73, 0.189);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.g-form::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: 0;
+    top: 0;
+    border-left: 2px solid red;
+    border-top: 2px solid red;
+    border-radius: 20px;
+    transition: all 400ms;
+}
+
+.g-form:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.g-form::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
+    border-radius: 20px;
+    transition: all 400ms;
+    z-index: 0;
+}
+
+.g-form:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.form-control {
+    position: relative;
+    z-index: 5;
+}

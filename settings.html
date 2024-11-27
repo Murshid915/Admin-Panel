@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="shortcut icon" href="lblcklogo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="toggle">
+        <aside>
+            <div class="logo">
+                <h1>BlackRock</h1>
+            </div>
+            <ul class="links">
+                <li>
+                    <a href="./dshbrd.html"><i class="fa-solid fa-gauge-simple"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="./users"><i class="fa-solid fa-user-tie"></i> User Management</a>
+                </li>
+                <li>
+                    <a href="./categories"><i class="fa-solid fa-layer-group"></i> Categories</a>
+                </li>
+                <li>
+                    <a href="./products"><i class="fa-solid fa-product-hunt"></i> Products</a>
+                </li>
+                <li>
+                    <a class="active" href="./settings.html"><i class="fa-solid fa-gear"></i> Settings </a>
+                </li>
+                <li>
+                    <a href="./logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                </li>
+            </ul>
+
+        </aside>
+        <main>
+            <div><label id="menu-bar" for="toggle"><i class="fa-solid fa-bars"></i></label>
+            </div>
+            <div class="content-area">
+                <h1>
+                    Settings
+                </h1>
+                <form action="" class="g-form">
+                    <div class="form-control">
+                        <label for="">Username</label>
+                        <input type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Password</label>
+                        <input type="password">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Description</label>
+                        <textarea name="" id=""></textarea>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Logo</label>
+                        <input type="file">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Notification</label>
+                        <input type="checkbox">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Mode</label>
+                        <input type="radio"  name="mode"><label class="inline-label"for="">Development</label>
+                        <input type="radio" name="mode"><label class="inline-label"for="">Production</label>
+                    </div>
+                    <div class="form-control">
+                        <label for="">Financial Year Starting</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-control">
+                        <label for="">Region</label>
+                        <select name="" id="">
+                            <option value="North">North</option>
+                            <option value="East">East</option>
+                            <option value="West">West</option>
+                            <option value="South">South</option>
+                        </select>
+                    </div>
+                    <div class="form-control btn-group">
+                        <button>Save Changes</button>
+                    </div>
+                </form>
+                </div>
+        </main>
+    </div>
+</body>
+</html>
